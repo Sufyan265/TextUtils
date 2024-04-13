@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar(props) {
+    let location = useLocation();
+
+    useEffect(() => {
+        // For change website title ↓ 
+        if (location.pathname === "/" || location.pathname === "/TextUtils"){
+            document.title = "TextUtils - Home";
+        }else if(location.pathname === "/about"){
+            document.title = "TextUtils - About";
+        }
+    }, [location.pathname])
 
     let darkModeStyle = {
         height: "30px",
@@ -12,10 +22,6 @@ export default function Navbar(props) {
 
     }
 
-    const changeTitle = () => {
-        // For change website title ↓ 
-        document.title = "TextUtils - About";
-    }
     // For add css in variables (in Object) ↓ 
     let myStyle = {
         transitionDuration: '0.6s',
@@ -38,7 +44,7 @@ export default function Navbar(props) {
                             <Link className="nav-link" aria-current="page" to="/TextUtils">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" onClick={changeTitle} to="/about">About</Link>
+                            <Link className="nav-link" to="/about">About</Link>
                         </li>
                     </ul>
 
