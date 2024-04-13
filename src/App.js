@@ -93,7 +93,7 @@ function App() {
               <Route exact path="/about" element={
                 <About />
               } />
-              <Route path="/" element={
+              <Route path="/TextUtils" element={
                 <TextForm showAlert={showAlert} heading="Type text to analyze" theme={theme} />
               } />
 
