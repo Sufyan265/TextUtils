@@ -90,11 +90,11 @@ function App() {
             </Route> */}
 
               {/* "exact" likhny sy react router exact path match krta ha (Good practice) ↓  */}
+              <Route exact path="/TextUtils" element={
+                <TextForm showAlert={showAlert} heading="Type text to analyze" theme={theme} />
+              } />
               <Route exact path="/about" element={
                 <About />
-              } />
-              <Route path="/TextUtils" element={
-                <TextForm showAlert={showAlert} heading="Type text to analyze" theme={theme} />
               } />
 
             </Routes>
