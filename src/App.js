@@ -69,7 +69,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename='TextUtils'>
         <div className={bodyMode} style={{ transitionDuration: '0.5s', minHeight: '100vh' }}>
 
           {/* 'Navbar' me custamizable text is tra add kr skty he (props) ↓ */}
