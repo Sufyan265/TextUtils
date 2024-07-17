@@ -91,7 +91,7 @@ export default function TextForm(props) {
     return (
         <>
             <div className="my-3">
-                <h2 className="d-inline">{props.heading}</h2>
+                <h1 className="d-inline">{props.heading}</h1>
                 <button type="button" disabled={text.length === 0} onClick={resetBtn} className="rounded-pill btn btn-outline-secondary py-1 mx-3 resetBtn">Reset <i className="bi bi-x-lg"></i></button>
             </div>
             <div className="form-floating"> {/* Buttons */}

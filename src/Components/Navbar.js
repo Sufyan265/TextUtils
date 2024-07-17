@@ -11,7 +11,7 @@ export default function Navbar(props) {
             document.title = "TextUtils - Home";
         }else if(location.pathname === "/about"){
             document.title = "TextUtils - About";
-        }
+        }        
     }, [location.pathname])
 
     let darkModeStyle = {
@@ -19,7 +19,6 @@ export default function Navbar(props) {
         width: "30px",
         "--bs-border-opacity": 0.5,
         cursor: 'pointer'
-
     }
 
     // For add css in variables (in Object) ↓ 
@@ -27,9 +26,6 @@ export default function Navbar(props) {
         transitionDuration: '0.6s',
         // backgroundColor: 'blue',
     }
-
-
-
 
     return (
         <nav className={`navbar navbar-expand-lg navbar-${props.theme} bg-${props.theme}`} style={myStyle}>
