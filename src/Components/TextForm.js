@@ -121,7 +121,7 @@ export default function TextForm(props) {
                 <h2 className="d-inline">Preview</h2>
                 <button type="button" disabled={text.length === 0} onClick={copyText} className="rounded-pill py-1 mx-3 copy-btn">{btnName} <i className={className}></i></button>
             </div>
-            <p>{text.length > 0 ? text : "Enter something to preview here"}</p>
+            <pre>{text.length > 0 ? text : "Enter something to preview here"}</p>
 
         </>
     )
